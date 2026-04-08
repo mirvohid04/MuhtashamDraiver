@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_draiver/const/sizes/textSize.dart';
 import 'package:food_draiver/ui/pages/balans/BalansPage.dart';
+import 'package:food_draiver/ui/pages/balans/FoodPage.dart';
 import 'package:food_draiver/ui/pages/chat/ChatPage.dart';
 import 'package:food_draiver/ui/pages/orders/OrderPage.dart';
 import 'package:food_draiver/ui/pages/profile/ProfilePage.dart';
@@ -16,7 +17,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = <Widget>[
-    OrderPage(),
+
+    //OrderPage(),
+    FoodPage(),
     PulPage(),
 XabarlarPage(),
 ProfilePage()  ];
@@ -57,7 +60,7 @@ ProfilePage()  ];
             BottomNavigationBarItem(
               icon: Icon(Icons.wallet_outlined),
               activeIcon: Icon(Icons.wallet),
-              label: 'Balans',
+              label: 'Buyurmalar',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_outline),

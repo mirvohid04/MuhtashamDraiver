@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_draiver/ui/auth/LoginPage.dart';
-import 'package:food_draiver/ui/auth/TelRaqPage.dart';
+import 'package:food_draiver/ui/pages/BottomNavigation.dart';
 import 'package:food_draiver/ui/pages/OnboardingScreen.dart';
 
 void main() {
@@ -34,44 +34,10 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Fr(),
+      home: BottomNavigation(),//OnboardingScreen(),
     );
   }
 }
 
 
-class Fr extends StatefulWidget {
-  const Fr({super.key});
-
-  @override
-  State<Fr> createState() => _FrState();
-}
-
-class _FrState extends State<Fr> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body:           Column(
-        children: [
-          Container(
-            width: 200,
-            height: 100,
-            color: Colors.red,
-          ),
-          SingleChildScrollView(
-
-            child: ListView.builder(
-                itemCount: 100,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (context,index){return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(width: 200,height: 50,color: Colors.blue,),
-                );}),
-          )
-        ],
-      )
-      ,
-    );
-  }
-}
 
